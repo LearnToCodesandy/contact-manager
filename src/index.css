@@ -97,3 +97,7 @@ input[type="submit"]:hover{
   font-size: 0.8rem;
   color: #666;
 }
+
+.display__Hide{
+  display: none;
+}
