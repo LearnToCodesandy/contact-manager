@@ -9,10 +9,12 @@ const ContactForm = ({contacts,setContacts}) => {
     const contactname = formdata.get('name');
     const contactphone = formdata.get('number');
     const data = {name : contactname,phone:contactphone};
-    const latestContacts = [data,...contacts];
-    setContacts(latestContacts);
-    localStorage.setItem('contacts',JSON.stringify(latestContacts));
-    e.target.reset();
+    if(contactname && contactphone){
+      const latestContacts = [data,...contacts];
+      setContacts(latestContacts);
+      localStorage.setItem('contacts',JSON.stringify(latestContacts));
+      e.target.reset();
+    }
   }
 
   return (
